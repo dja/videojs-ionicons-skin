@@ -1,0 +1,162 @@
+@import bourbon
+
+$play-button-size: 50px
+$control-height: 50px
+$control-padding: 20px
+$play-width: 24px
+$play-height: 24px
+$volume-width: 22px
+$volume-height: 14px
+$fullscreen-width: 22px
+$fullscreen-height: 14px
+
+
+.vjs-ionicons-skin
+  color: white
+
+  .vjs-poster:focus, .vjs-control:focus
+    outline: none
+
+  .vjs-big-play-button
+    margin: 0
+    padding: 0
+    opacity: 1
+    color: transparent
+    background-color: transparent
+    +position(absolute, 50% null null 50%)
+    +transform(translateX(-50%) translateY(-50%))
+    +transition(opacity 100ms $ease-in-out-quad)
+    z-index: 2
+
+    &:before
+      content: "\f215"
+      font-family: "Ionicons"
+      font-size: +rem($play-button-size)
+      color: white
+      display: block
+
+  // Hide play button when the controls are disabled, the video has started, or
+  // on mobile.
+  &.vjs-controls-disabled, &.vjs-has-started, &.vjs-using-native-controls
+    .vjs-big-play-button
+      opacity: 0
+      pointer-events: none
+
+  .vjs-control-bar
+    height: $control-height
+    opacity: 0
+    pointer-events: none
+    +position(absolute, null 0 0 0)
+    z-index: 2
+  // Fade the control bar in quickly when the video starts.
+  &.vjs-has-started .vjs-control-bar
+    opacity: 1
+    pointer-events: auto
+    +transition(opacity 100ms $ease-in-out-quad)
+  // Fade the control bar out slowly when the video is playing for a while.
+  &.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar
+    opacity: 0
+    +transition(opacity 1s $ease-in-out-quad)
+  &.vjs-has-started .vjs-poster
+    display: none
+  // Hide the control bar when it's not needed/wanted.
+  &.vjs-using-native-controls .vjs-control-bar,
+  &.vjs-controls-disabled .vjs-control-bar
+    display: none
+
+  .vjs-progress-control
+    $clickable-height: 20px
+    $visible-height: 4px
+    +position(absolute, 0 95px 0 50px)
+
+    .vjs-progress-holder
+      cursor: pointer
+      height: $clickable-height
+      margin-top: -($clickable-height / 2)
+      +position(absolute, 50% 0 null 0)
+      &:after
+        background-color: rgba(white, .3)
+        border-radius: $visible-height / 2
+        content: ""
+        display: block
+        height: $visible-height
+        margin-top: -($visible-height / 2)
+        +position(absolute, 50% 0 null 0)
+
+    .vjs-play-progress
+      background-color: rgba(white, .7)
+      border-radius: $visible-height / 2
+      height: $visible-height
+      margin-top: -($visible-height / 2)
+      +position(absolute, 50% 0 null 0)
+
+  .vjs-play-control
+    cursor: pointer
+    background-color: transparent
+    padding: 0
+    +transform(translateY(-50%))
+    +position(absolute, 50% null null $control-padding)
+    +size($play-width $play-height)
+    &:before
+      content: "\f215"
+      font-family: "Ionicons"
+      font-size: +rem($play-height)
+      color: white
+      display: block
+      +size(0)
+  &.vjs-playing .vjs-play-control
+    &:before
+      content: "\f210"
+
+  .vjs-fullscreen-control
+    background-color: transparent
+    border: 3px solid white
+    box-sizing: border-box
+    cursor: pointer
+    +transform(translateY(-50%))
+    +position(absolute, 50% $control-padding null null)
+    +size($fullscreen-width $fullscreen-height)
+  &.vjs-fullscreen .vjs-fullscreen-control
+    background: white
+    &:after
+      background: black
+      content: ""
+      display: block
+      +position(absolute, null null 0 0)
+      +size(5px)
+
+  .vjs-volume-control
+    $right: $control-padding + $fullscreen-width + 13
+    cursor: pointer
+    +transform(translateY(-50%))
+    +position(absolute, 50% $right null null)
+    +size($volume-width $volume-height)
+
+  .vjs-volume-bar
+    background: url(vol-trans.png)
+    background-size: $volume-width $volume-height
+    +size(100%)
+
+  .vjs-volume-level
+    background: url(vol-white.png)
+    background-size: $volume-width $volume-height
+    height: 100%
+
+  // Hide extra controls.
+  .vjs-current-time,
+  .vjs-time-divider,
+  .vjs-duration,
+  .vjs-remaining-time,
+  .vjs-load-progress,
+  .vjs-control-text,
+  .vjs-control-content,
+  .vjs-slider-handle,
+  .vjs-volume-handle,
+  .vjs-live-controls,
+  .vjs-live-control,
+  .vjs-playback-rate,
+  .vjs-subtitles-button,
+  .vjs-captions-button,
+  .vjs-mute-control,
+  .vjs-hidden,
+    display: none

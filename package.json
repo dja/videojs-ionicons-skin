@@ -1,0 +1,25 @@
+{
+  "name": "videojs-ionicons-skin",
+  "version": "1.0.0",
+  "description": "A Video.js skin modeled on SublimeVideo and Ionicons.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danieljacobarcher/videojs-ionicons-skin.git"
+  },
+  "keywords": [
+    "videojs",
+    "video"
+  ],
+  "author": "Daniel Archer <me@dja.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "gulp": "^3.9.0",
+    "gulp-base64": "0.1.2",
+    "gulp-concat": "^2.5.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^0.5.0"
+  }
+}

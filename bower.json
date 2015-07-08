@@ -1,0 +1,24 @@
+{
+  "name": "videojs-ionicons-skin",
+  "version": "1.0.0",
+  "authors": [
+    "Zak Johnson <zak@madebycabin.com>",
+    "Daniel Archer <me@dja.io>"
+  ],
+  "description": "A Video.js skin modeled on SublimeVideo and Ionicons.",
+  "main": "dist/videojs-ionicons-skin.css",
+  "keywords": [
+    "videojs",
+    "video"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "gulpfile.coffee",
+    "screenshot.png",
+    "src"
+  ],
+  "devDependencies": {
+    "bourbon": "~4.0.1"
+  }
+}
