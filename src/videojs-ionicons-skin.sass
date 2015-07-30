@@ -32,8 +32,10 @@ $fullscreen-height: 14px
       content: "\f215"
       font-family: "Ionicons"
       font-size: +rem($play-button-size)
-      color: white
+      color: transparentize(white, 0.05)
       display: block
+      text-shadow: 0 0 5px transparentize(black, 0.5)
+      width: +rem($play-button-size)
 
   // Hide play button when the controls are disabled, the video has started, or
   // on mobile.
