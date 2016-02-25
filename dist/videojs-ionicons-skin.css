@@ -59,7 +59,7 @@
   .vjs-ionicons-skin .vjs-progress-control {
     position: absolute;
     top: 0;
-    right: 95px;
+    right: 125px;
     bottom: 0;
     left: 50px; }
     .vjs-ionicons-skin .vjs-progress-control .vjs-progress-holder {
@@ -138,7 +138,7 @@
       left: 0;
       height: 5px;
       width: 5px; }
-  .vjs-ionicons-skin .vjs-volume-control {
+  .vjs-ionicons-skin .vjs-volume-menu-button {
     cursor: pointer;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -147,9 +147,15 @@
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    right: 55px;
+    right: 75px;
     height: 14px;
     width: 22px; }
+    .vjs-ionicons-skin .vjs-volume-menu-button .vjs-menu {
+      height: 100%;
+      width: 100%; }
+      .vjs-ionicons-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+        height: 100%;
+        width: 100%; }
   .vjs-ionicons-skin .vjs-volume-bar {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcCAQAAACw95UnAAAAMElEQVRIx2NgoBL4n4YKGUYNHkEG4zJg1OCRYDCpBowaPJwMppbLRg0eNXjUYBLEAXWNUA6QNm1lAAAAAElFTkSuQmCC);
     background-size: 22px 14px;

@@ -69,7 +69,7 @@ $fullscreen-height: 14px
   .vjs-progress-control
     $clickable-height: 20px
     $visible-height: 4px
-    +position(absolute, 0 95px 0 50px)
+    +position(absolute, 0 125px 0 50px)
 
     .vjs-progress-holder
       cursor: pointer
@@ -127,12 +127,15 @@ $fullscreen-height: 14px
       +position(absolute, null null 0 0)
       +size(5px)
 
-  .vjs-volume-control
-    $right: $control-padding + $fullscreen-width + 13
+  .vjs-volume-menu-button
     cursor: pointer
     +transform(translateY(-50%))
-    +position(absolute, 50% $right null null)
+    +position(absolute, 50% 75px null null)
     +size($volume-width $volume-height)
+    .vjs-menu
+      +size(100%)
+      .vjs-menu-content
+        +size(100%)
 
   .vjs-volume-bar
     background: url(vol-trans.png)
