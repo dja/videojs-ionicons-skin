@@ -101,7 +101,7 @@
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 16px;
     height: 24px;
     width: 24px; }
     .vjs-ionicons-skin .vjs-play-control:before {
@@ -124,7 +124,7 @@
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 16px;
     height: 14px;
     width: 22px; }
   .vjs-ionicons-skin.vjs-fullscreen .vjs-fullscreen-control {
@@ -147,7 +147,7 @@
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    right: 75px;
+    right: 90px;
     height: 14px;
     width: 22px; }
     .vjs-ionicons-skin .vjs-volume-menu-button .vjs-menu {
