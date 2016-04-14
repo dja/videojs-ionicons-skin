@@ -4,7 +4,7 @@
   "description": "A Video.js skin modeled on SublimeVideo and Ionicons.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/danieljacobarcher/videojs-ionicons-skin.git"
+    "url": "git://github.com/dja/videojs-ionicons-skin.git"
   },
   "keywords": [
     "videojs",
